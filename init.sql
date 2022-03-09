@@ -51,12 +51,12 @@ CREATE TABLE seating (
 
 GRANT ALL PRIVILEGES ON guests, wedding_party, seating TO planner;
 
-INSERT INTO guests VALUES ('Olivia', 'Adams', 'b', 'olivia@gmail.com', '1111111111', TRUE);
-INSERT INTO guests VALUES ('Michael', 'Flinn', 'g', 'michael@gmail.com', '2222222222', TRUE);
-INSERT INTO guests VALUES ('Alice', 'Adams', 'b', 'alice@gmail.com', '3333333333', TRUE);
-INSERT INTO guests VALUES ('Owen', 'Flinn', 'g', 'owen@gmail.com', '4444444444', TRUE);
-INSERT INTO guests VALUES ('Diana', 'Adams', 'b', 'diana@gmail.com', '5555555555', TRUE);
-INSERT INTO guests VALUES ('Daniel', 'Flinn', 'g', 'daniel@gmail.com', '6666666666', TRUE);
+INSERT INTO guests VALUES (1, 'Olivia', 'Adams', 'b', 'olivia@gmail.com', '1111111111', TRUE);
+INSERT INTO guests VALUES (2, 'Michael', 'Flinn', 'g', 'michael@gmail.com', '2222222222', TRUE);
+INSERT INTO guests VALUES (3, 'Alice', 'Adams', 'b', 'alice@gmail.com', '3333333333', TRUE);
+INSERT INTO guests VALUES (4, 'Owen', 'Flinn', 'g', 'owen@gmail.com', '4444444444', TRUE);
+INSERT INTO guests VALUES (5, 'Diana', 'Adams', 'b', 'diana@gmail.com', '5555555555', TRUE);
+INSERT INTO guests VALUES (6, 'Daniel', 'Flinn', 'g', 'daniel@gmail.com', '6666666666', TRUE);
 INSERT INTO guests VALUES ('Jade', 'Flinn', 'g', 'jade@gmail.com', '7777777777', FALSE);
 INSERT INTO guests VALUES ('Jenny', 'Flinn', 'g', 'jenny@gmail.com', '8888888888', TRUE);
 INSERT INTO guests VALUES ('Oliver', 'Adams', 'b', 'oliver@gmail.com', '9999999999', FALSE);
