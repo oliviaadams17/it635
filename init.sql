@@ -1,7 +1,7 @@
 CREATE DATABASE wedding_planner;
 CREATE USER planner WITH PASSWORD 'testing';
 GRANT ALL PRIVILEGES ON DATABASE wedding_planner TO planner;
-\c planner
+\c wedding_planner
 
 CREATE TABLE guests (
 	guest_id SERIAL,
