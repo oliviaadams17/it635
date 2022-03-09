@@ -4,7 +4,7 @@ GRANT ALL PRIVILEGES ON DATABASE wedding_planner TO planner;
 \c wedding_planner
 
 CREATE TABLE guests (
-	guest_id SERIAL,
+	guest_id INTEGER NOT NULL UNIQUE,
 	first_name VARCHAR(128) NOT NULL,
 	last_name VARCHAR(128) NOT NULL,
 	bride_groom VARCHAR(1) NOT NULL CHECK (bride_groom IN ('b', 'B', 'g', 'G')),
@@ -51,26 +51,26 @@ CREATE TABLE seating (
 
 GRANT ALL PRIVILEGES ON guests, wedding_party, seating TO planner;
 
-INSERT INTO guests VALUES ('Olivia', 'Adams', 'b', 'olivia@gmail.com', '1111111111', TRUE);
-INSERT INTO guests VALUES ('Michael', 'Flinn', 'g', 'michael@gmail.com', '2222222222', TRUE);
-INSERT INTO guests VALUES ('Alice', 'Adams', 'b', 'alice@gmail.com', '3333333333', TRUE);
-INSERT INTO guests VALUES ('Owen', 'Flinn', 'g', 'owen@gmail.com', '4444444444', TRUE);
-INSERT INTO guests VALUES ('Diana', 'Adams', 'b', 'diana@gmail.com', '5555555555', TRUE);
-INSERT INTO guests VALUES ('Daniel', 'Flinn', 'g', 'daniel@gmail.com', '6666666666', TRUE);
-INSERT INTO guests VALUES ('Jade', 'Flinn', 'g', 'jade@gmail.com', '7777777777', FALSE);
-INSERT INTO guests VALUES ('Jenny', 'Flinn', 'g', 'jenny@gmail.com', '8888888888', TRUE);
-INSERT INTO guests VALUES ('Oliver', 'Adams', 'b', 'oliver@gmail.com', '9999999999', FALSE);
-INSERT INTO guests VALUES ('Sue', 'Adams', 'b', 'sue@gmail.com', '1212121212', FALSE);
-INSERT INTO guests VALUES ('Dave', 'Adams', 'b', 'dave@gmail.com', '1313131313', FALSE);
-INSERT INTO guests VALUES ('Ian', 'Adams', 'b', 'ian@gmail.com', '1414141414', FALSE);
-INSERT INTO guests VALUES ('Hunter', 'Smith', 'g', 'hunter@gmail.com', '1515151515', TRUE);
-INSERT INTO guests VALUES ('Amanda', 'Allen', 'g', 'amanda@gmail.com', '1616161616', FALSE);
-INSERT INTO guests VALUES ('Christopher', 'Scott', 'g', 'chris@gmail.com', '1717171717', FALSE);
-INSERT INTO guests VALUES ('Sarah', 'Scott', 'g', 'sarah@gmail.com', '1818181818', FALSE);
-INSERT INTO guests VALUES ('Emily', 'Adams', 'b', 'emily@gmail.com', '1919191919', FALSE);
-INSERT INTO guests VALUES ('Kat', 'Adams', 'b', 'kat@gmail.com', '1122112211', TRUE);
-INSERT INTO guests VALUES ('Tim', 'Flinn', 'g', 'tim@gmail.com', '1133113311', TRUE);
-INSERT INTO guests VALUES ('Matt', 'Jones', 'g', 'olivia@gmail.com', '1144114411', False);
+INSERT INTO guests VALUES (1, 'Olivia', 'Adams', 'b', 'olivia@gmail.com', '1111111111', TRUE);
+INSERT INTO guests VALUES (2, 'Michael', 'Flinn', 'g', 'michael@gmail.com', '2222222222', TRUE);
+INSERT INTO guests VALUES (3, 'Alice', 'Adams', 'b', 'alice@gmail.com', '3333333333', TRUE);
+INSERT INTO guests VALUES (4, 'Owen', 'Flinn', 'g', 'owen@gmail.com', '4444444444', TRUE);
+INSERT INTO guests VALUES (5, 'Diana', 'Adams', 'b', 'diana@gmail.com', '5555555555', TRUE);
+INSERT INTO guests VALUES (6, 'Daniel', 'Flinn', 'g', 'daniel@gmail.com', '6666666666', TRUE);
+INSERT INTO guests VALUES (7, 'Jade', 'Flinn', 'g', 'jade@gmail.com', '7777777777', FALSE);
+INSERT INTO guests VALUES (8, 'Jenny', 'Flinn', 'g', 'jenny@gmail.com', '8888888888', TRUE);
+INSERT INTO guests VALUES (9, 'Oliver', 'Adams', 'b', 'oliver@gmail.com', '9999999999', FALSE);
+INSERT INTO guests VALUES (10, 'Sue', 'Adams', 'b', 'sue@gmail.com', '1212121212', FALSE);
+INSERT INTO guests VALUES (11, 'Dave', 'Adams', 'b', 'dave@gmail.com', '1313131313', FALSE);
+INSERT INTO guests VALUES (12, 'Ian', 'Adams', 'b', 'ian@gmail.com', '1414141414', FALSE);
+INSERT INTO guests VALUES (13, 'Hunter', 'Smith', 'g', 'hunter@gmail.com', '1515151515', TRUE);
+INSERT INTO guests VALUES (14, 'Amanda', 'Allen', 'g', 'amanda@gmail.com', '1616161616', FALSE);
+INSERT INTO guests VALUES (15, 'Christopher', 'Scott', 'g', 'chris@gmail.com', '1717171717', FALSE);
+INSERT INTO guests VALUES (16, 'Sarah', 'Scott', 'g', 'sarah@gmail.com', '1818181818', FALSE);
+INSERT INTO guests VALUES (17, 'Emily', 'Adams', 'b', 'emily@gmail.com', '1919191919', FALSE);
+INSERT INTO guests VALUES (18, 'Kat', 'Adams', 'b', 'kat@gmail.com', '1122112211', TRUE);
+INSERT INTO guests VALUES (19, 'Tim', 'Flinn', 'g', 'tim@gmail.com', '1133113311', TRUE);
+INSERT INTO guests VALUES (20, 'Matt', 'Jones', 'g', 'olivia@gmail.com', '1144114411', False);
 
 INSERT INTO wedding_party VALUES ('Olivia', 'Adams', 'bride', 1);
 INSERT INTO wedding_party VALUES ('Michael', 'Flinn', 'groom', 2);
