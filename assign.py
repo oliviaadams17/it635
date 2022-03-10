@@ -32,7 +32,7 @@ while True:
         name = str(input()).split()
         first = name[0]
         last = name[1]
-        curr.execute("""
+        cur.execute("""
             SELECT guest_id FROM guests WHERE first_name = %s AND last_name = %s;""",(first,last));
         id = curr.fetchone()[0]
         print(f"Do you want to delete guest id {id}? Y or N")
