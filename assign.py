@@ -35,13 +35,11 @@ while True:
         cur.execute("""
             SELECT guest_id FROM guests WHERE first_name = %s AND last_name = %s;""",(first,last));
         id = cur.fetchone()[0]
-        print(type(id))
         print(f"Do you want to delete guest id {id}? Y or N")
-        id = str(id)
         answer = str(input())
         if answer == "Y":
             cur.execute("""
-                DELETE FROM guests WHERE guest_id = %s;""", (str(id)));
+                DELETE FROM guests WHERE guest_id = {id};""");
             print("Guest Deleted")
 
 cur.close()
