@@ -51,7 +51,7 @@ CREATE TABLE seating (
 
 GRANT ALL PRIVILEGES ON guests, wedding_party, seating TO planner;
 
-INSERT INTO guests VALUES ('Olivia', 'Adams', 'b', 'olivia@gmail.com', '1111111111', TRUE);
+INSERT INTO guests VALUES (DEFAULT, 'Olivia', 'Adams', 'b', 'olivia@gmail.com', '1111111111', TRUE);
 INSERT INTO guests VALUES ('Michael', 'Flinn', 'g', 'michael@gmail.com', '2222222222', TRUE);
 INSERT INTO guests VALUES ('Alice', 'Adams', 'b', 'alice@gmail.com', '3333333333', TRUE);
 INSERT INTO guests VALUES ('Owen', 'Flinn', 'g', 'owen@gmail.com', '4444444444', TRUE);
