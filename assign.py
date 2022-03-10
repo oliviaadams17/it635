@@ -41,6 +41,7 @@ while True:
             cur.execute("""
                 DELETE FROM guests WHERE guest_id = %s;""", (id));
             print("Guest Deleted")
+            conn.commit()
 
 cur.close()
 conn.close()
