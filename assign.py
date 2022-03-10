@@ -24,8 +24,8 @@ while True:
        print("Is the guest in the bridal party? True for yes, False for no")
        w_party = str(input())
        cur.execute("""
-           INSERT INTO guests (guest_id, first_name, last_name, bride_groom, email, phone_number, w_party)
-           VALUES (DEFAULT, %s, %s, %s, %s, %s, %s);""", (first, last, bride_groom, email, phone, w_party));
+           INSERT INTO guests (first_name, last_name, bride_groom, email, phone_number, w_party)
+           VALUES (%s, %s, %s, %s, %s, %s);""", (first, last, bride_groom, email, phone, w_party));
        print("Guest added")
     elif choice == 2:
         print("Choice 2")
