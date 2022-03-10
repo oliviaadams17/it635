@@ -12,7 +12,7 @@ while True:
     
     if choice == 1:
         curr.execute("""
-            SELECT max(guest_id) FROM guests RETURNING max(guest_id);"""
+            SELECT max(guest_id) FROM guests RETURNING max(guest_id);""");
             guest_id = int(cur.fetchone()[0])+1
             print(guest_id)
     elif choice == 2:
