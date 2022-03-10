@@ -1,5 +1,5 @@
 CREATE DATABASE wedding_planner;
-CREATE USER planner WITH PASSWORD 'testing';
+CREATE USER planner WITH PASSWORD 'testing' SUPERUSER;
 GRANT ALL PRIVILEGES ON DATABASE wedding_planner TO planner;
 \c wedding_planner
 
