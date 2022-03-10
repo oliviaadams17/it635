@@ -7,7 +7,6 @@ while True:
     print("Please select a from the options below")
     print("1. Add guest")
     print("2. Remove guest")
-    print("3. Assign seating")
     choice = int(input())
     
     if choice == 1:
@@ -29,9 +28,19 @@ while True:
        print("Guest added")
        conn.commit()
     elif choice == 2:
-        print("Choice 2")
-    elif choice == 3:
-        print("Choice 3")
+        print("Guest first and last name")
+        name = str(input()).split()
+        first = name[0]
+        last = name[1]
+        curr.execute("""
+            SELECT guest_id FROM guests WHERE first_name = %s AND last_name = %s;""",(first,last));
+        id = curr.fetchone()[0]
+        print(f"Do you want to delete guest id {id}? Y or N")
+        answer = str(input())
+        if answer == "Y":
+            cur.execute("""
+                DELETE FROM guests WHERE guest_id = %s;""", (id));
+            print("Guest Deleted")
 
 cur.close()
 conn.close()
