@@ -40,7 +40,7 @@ while True:
         number = str(id)
         if answer == "Y":
             cur.execute("""
-                DELETE FROM guests WHERE guest_id = %s;""", (number));
+                DELETE FROM guests WHERE guest_id = %s;""", (number,));
             print("Guest Deleted")
             conn.commit()
 
