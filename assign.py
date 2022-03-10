@@ -27,28 +27,11 @@ while True:
            INSERT INTO guests (first_name, last_name, bride_groom, email, phone_number, w_party)
            VALUES (%s, %s, %s, %s, %s, %s);""", (first, last, bride_groom, email, phone, w_party));
        print("Guest added")
+       conn.commit()
     elif choice == 2:
         print("Choice 2")
     elif choice == 3:
         print("Choice 3")
-    
-    
-    
-#    print("Please input up to 10 guest number separated only by a comma")
-#    guests = input()
-#    guest_num = guest.split(",")
-#    for i in range(len(guest_num)):
-#        guest_num[i] = int(guest_num[i])
-#cur.execute("""
-#    INSERT INTO seating
-#    VALUES (%s, 
-#""", (table,));
 
-#    print(f"Seating created")
-#    conn.commit()
-    
-    
-    
-#SELECT guest_id
-#FROM guests
-#WHERE guest_id NOT IN seating;
+cur.close()
+conn.close()
