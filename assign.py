@@ -34,7 +34,7 @@ while True:
         last = name[1]
         cur.execute("""
             SELECT guest_id FROM guests WHERE first_name = %s AND last_name = %s;""",(first,last));
-        id = curr.fetchone()[0]
+        id = cur.fetchone()[0]
         print(f"Do you want to delete guest id {id}? Y or N")
         answer = str(input())
         if answer == "Y":
