@@ -37,9 +37,10 @@ while True:
         id = cur.fetchone()[0]
         print(f"Do you want to delete guest id {id}? Y or N")
         answer = str(input())
+        number = str(id)
         if answer == "Y":
             cur.execute("""
-                DELETE FROM guests WHERE guest_id = %s;""", (id));
+                DELETE FROM guests WHERE guest_id = %s;""", (number));
             print("Guest Deleted")
             conn.commit()
 
