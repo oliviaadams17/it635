@@ -10,14 +10,14 @@ while True:
     print("3. Assign seating")
     choice = int(input())
     
-    if choice = 1:
+    if choice == 1:
         curr.execute("""
             SELECT max(guest_id) FROM guests RETURNING max(guest_id);"""
             guest_id = int(cur.fetchone()[0])+1
             print(guest_id)
-    elif choice = 2:
+    elif choice == 2:
         print("Choice 2")
-    elif choice = 3:
+    elif choice == 3:
         print("Choice 3")
     
     
