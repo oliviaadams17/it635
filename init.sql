@@ -4,15 +4,14 @@ GRANT ALL PRIVILEGES ON DATABASE wedding_planner TO planner;
 \c wedding_planner
 
 CREATE TABLE guests (
-	guest_id SERIAL,
+	guest_id SERIAL PRIMARY KEY,
 	first_name VARCHAR(128) NOT NULL,
 	last_name VARCHAR(128) NOT NULL,
 	bride_groom VARCHAR(1) NOT NULL CHECK (bride_groom IN ('b', 'B', 'g', 'G')),
 	email VARCHAR(256) NOT NULL,
 	phone_number VARCHAR(16) NOT NULL,
 	w_party BOOLEAN,
-	table_number INTEGER,
-	PRIMARY KEY (guest_id)
+	table_number INTEGER
 );
 
 CREATE TABLE wedding_party (
@@ -36,17 +35,7 @@ CREATE TABLE seating (
 	seat8 INTEGER,
 	seat9 INTEGER,
 	seat10 INTEGER,
-	PRIMARY KEY (table_number),
-	CONSTRAINT guest1 FOREIGN KEY (seat1) REFERENCES guests(guest_id),
-	CONSTRAINT guest2 FOREIGN KEY (seat2) REFERENCES guests(guest_id),
-	CONSTRAINT guest3 FOREIGN KEY (seat3) REFERENCES guests(guest_id),
-	CONSTRAINT guest4 FOREIGN KEY (seat4) REFERENCES guests(guest_id),
-	CONSTRAINT guest5 FOREIGN KEY (seat5) REFERENCES guests(guest_id),
-	CONSTRAINT guest6 FOREIGN KEY (seat6) REFERENCES guests(guest_id),
-	CONSTRAINT guest7 FOREIGN KEY (seat7) REFERENCES guests(guest_id),
-	CONSTRAINT guest8 FOREIGN KEY (seat8) REFERENCES guests(guest_id),
-	CONSTRAINT guest9 FOREIGN KEY (seat9) REFERENCES guests(guest_id),
-	CONSTRAINT guest10 FOREIGN KEY (seat10) REFERENCES guests(guest_id)
+	PRIMARY KEY (table_number)
 );
 
 GRANT ALL PRIVILEGES ON guests, wedding_party, seating TO planner;
