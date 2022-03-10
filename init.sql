@@ -38,7 +38,7 @@ CREATE TABLE seating (
 	PRIMARY KEY (table_number)
 );
 
-GRANT ALL PRIVILEGES ON guests, wedding_party, seating TO planner;
+GRANT SELECT, INSERT, UPDATE, DELETE ON guests, wedding_party, seating TO planner;
 
 INSERT INTO guests (first_name, last_name, bride_groom, email, phone_number, w_party) VALUES ('Olivia', 'Adams', 'b', 'olivia@gmail.com', '1111111111', TRUE);
 INSERT INTO guests (first_name, last_name, bride_groom, email, phone_number, w_party) VALUES ('Michael', 'Flinn', 'g', 'michael@gmail.com', '2222222222', TRUE);
