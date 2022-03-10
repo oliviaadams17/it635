@@ -4,7 +4,7 @@ GRANT ALL PRIVILEGES ON DATABASE wedding_planner TO planner;
 \c wedding_planner
 
 CREATE TABLE guests (
-	guest_id SERIAL UNIQUE,
+	guest_id SERIAL,
 	first_name VARCHAR(128) NOT NULL,
 	last_name VARCHAR(128) NOT NULL,
 	bride_groom VARCHAR(1) NOT NULL CHECK (bride_groom IN ('b', 'B', 'g', 'G')),
