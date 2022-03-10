@@ -39,7 +39,7 @@ while True:
         answer = str(input())
         if answer == "Y":
             cur.execute("""
-                DELETE FROM guests WHERE guest_id = {id};""");
+                DELETE FROM guests WHERE guest_id = %;""", (id));
             print("Guest Deleted")
 
 cur.close()
