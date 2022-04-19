@@ -59,6 +59,7 @@ customerValidator = {
 									bsonType: "number",
 									description: "Each payment must have a Payment Id that is a number"
 								}
+							}
 						}
 						Rental Date: {
 							bsonType: "string",
